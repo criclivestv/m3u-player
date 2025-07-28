@@ -1,0 +1,1 @@
+// Service Worker (empty for now)
