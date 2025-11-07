@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embed Player</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embed Player</title>
 </head>
 <body style="margin:0;background:#000">
-    <div id="videoPlayer" style="width:100%;height:100vh;"></div>
-    <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const file = urlParams.get("url");
-        const vast = urlParams.get("vast") || "https://youradexchange.com/video/select.php?r=10595714";
+  <div id="videoPlayer" style="width:100%;height:100vh;"></div>
 
-        jwplayer("videoPlayer").setup({
-            file: file,
-            width: "100%",
-            height: "100%",
-            autostart: true,
-            mute: false,
-            advertising: {
-                client: "vast",
-                tag: vast
-            }
-        });
-    </script>
+  <!-- JWPlayer Script -->
+  <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get("url");
+    
+    // ✅ তোমার নতুন বিজ্ঞাপন লিংক
+    const vast = urlParams.get("vast") || "https://youradexchange.com/video/select.php?r=10595714";
+
+    jwplayer("videoPlayer").setup({
+      file: file,
+      width: "100%",
+      height: "100%",
+      autostart: true,
+      mute: false,
+      advertising: {
+        client: "vast",
+        tag: vast
+      }
+    });
+  </script>
 </body>
 </html>
