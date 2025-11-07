@@ -1,7 +1,7 @@
 function playVideo() {
     const url = document.getElementById("stream-url").value.trim();
     const vastUrl = document.getElementById("vast-url").value.trim() ||
-        "https://droopy-management.com/d.muFNzod/G-NrvUZgGbUS/leamt9WuaZAUqlZkIPRTzY/1gMozhcay/NODSM/tZNdjFUlzFNhzRI/0_N/CtZ/sFaxWW1ypNdyD/0/xS";
+        "https://youradexchange.com/video/select.php?r=10595714";
 
     if (!url) return alert("Please enter a stream URL");
 
